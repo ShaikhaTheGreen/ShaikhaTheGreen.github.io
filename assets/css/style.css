@@ -317,6 +317,15 @@ section:first-of-type { border-top: none; }
   transition: transform .2s var(--ease);
 }
 .card:hover .card-link::after { transform: translateX(3px); }
+.card .team {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  font-size: .85rem;
+  color: var(--ink-mute);
+  line-height: 1.55;
+}
+.card .team strong { color: var(--navy); font-weight: 600; }
 
 /* ---------- About ---------- */
 .about-grid {
