@@ -240,26 +240,23 @@ section:first-of-type { border-top: none; }
   border-top: 1px solid var(--line);
 }
 .affiliation {
-  display: flex; align-items: center; gap: 14px;
+  display: flex; align-items: center; gap: 16px;
   font-size: .92rem; color: var(--ink-mute);
   padding: 6px 0;
 }
 .affiliation strong { color: var(--ink); font-weight: 600; }
 .affiliation .affil-logo {
-  height: 30px;
+  height: 46px;
   width: auto;
-  max-width: 140px;
+  max-width: 200px;
   object-fit: contain;
   flex: none;
-  padding: 4px 12px 4px 0;
+  padding: 4px 16px 4px 0;
   border-right: 1px solid var(--line);
 }
-.affiliation .affil-logo.psu {
-  max-width: 130px;
-}
 @media (max-width: 560px) {
-  .affiliation { gap: 10px; }
-  .affiliation .affil-logo { height: 24px; max-width: 110px; padding-right: 8px; }
+  .affiliation { gap: 12px; }
+  .affiliation .affil-logo { height: 36px; max-width: 150px; padding-right: 12px; }
 }
 
 /* ---------- Cards ---------- */
