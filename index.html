@@ -27,6 +27,7 @@
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
         <a href="#teaching">Teaching</a>
+        <a href="#projects">Projects</a>
         <a href="#advising">Advising</a>
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
@@ -408,6 +409,186 @@
         <li><span class="code">ISC353</span><span class="title">Information Systems Security</span></li>
         <li><span class="code">ISC380</span><span class="title">Information System Management</span></li>
       </ul>
+    </div>
+  </section>
+
+  <!-- ===== Student Projects ===== -->
+  <section id="projects">
+    <div class="container">
+      <p class="eyebrow">Student Projects</p>
+      <h2>What students built.</h2>
+      <p class="muted" style="max-width: 60ch;">
+        A selection of recent course projects. Project titles are linked
+        when the team's repository is public.
+      </p>
+
+      <h3 style="margin-top: 36px;">ISC230 — IT Infrastructure · Spring 2026</h3>
+      <p class="muted" style="margin-top: -4px;">
+        Each team built a working parallel-vs-sequential implementation and
+        reported on Amdahl's Law and measured speed-ups.
+      </p>
+      <div class="card-grid">
+
+        <article class="card reveal">
+          <div class="kicker">ISC230 · Parallel Computing</div>
+          <h3>Parallel Word Counter</h3>
+          <p>
+            Counts word frequencies across 10 books, comparing a sequential
+            loop with a Python <code>multiprocessing</code> Pool that maps
+            books across worker processes.
+          </p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">multiprocessing</span>
+          </div>
+          <div class="team"><strong>Team:</strong> Sara Saed · Afnan Alfalah</div>
+          <a class="card-link" href="https://github.com/AfnanAlfa/ISC-IT-infrastructure-M2-word-counter" target="_blank" rel="noopener">View repository</a>
+        </article>
+
+        <article class="card reveal">
+          <div class="kicker">ISC230 · Parallel Computing</div>
+          <h3>Parallel Image Processing</h3>
+          <p>
+            Sequential vs parallel pipeline for grayscale conversion and
+            resizing across 100 images. The team measured runtimes,
+            scaled worker counts, and analyzed performance against
+            Amdahl's Law.
+          </p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Colab</span>
+            <span class="tag">Amdahl's Law</span>
+          </div>
+          <div class="team"><strong>Team:</strong> Ahmad Sheet · Mohammad</div>
+        </article>
+
+        <article class="card reveal">
+          <div class="kicker">ISC230 · Parallel Computing</div>
+          <h3>Parallel Password Hash Checker</h3>
+          <p>
+            Parallel dictionary-attack simulator that compares the
+            performance and security characteristics of two hashing
+            algorithms using Python's multiprocessing.
+          </p>
+          <div class="tags">
+            <span class="tag">Hashing</span>
+            <span class="tag">bcrypt</span>
+            <span class="tag">multiprocessing</span>
+          </div>
+          <div class="team"><strong>Team:</strong> J. Alfailakawi</div>
+        </article>
+
+        <article class="card reveal">
+          <div class="kicker">ISC230 · Parallel Computing</div>
+          <h3>CPU vs GPU Speed Test</h3>
+          <p>
+            PyTorch neural-network training timed on CPU vs GPU with
+            matched models and parameters, demonstrating how GPU
+            parallelism shifts performance characteristics.
+          </p>
+          <div class="tags">
+            <span class="tag">PyTorch</span>
+            <span class="tag">GPU</span>
+            <span class="tag">Benchmarking</span>
+          </div>
+          <div class="team"><strong>Team:</strong> Salma Elhosany</div>
+        </article>
+
+        <article class="card reveal">
+          <div class="kicker">ISC230 · Parallel Computing</div>
+          <h3>Parallel Web Scraper (Simplified)</h3>
+          <p>
+            Comparison of sequential and parallel web-scraping
+            implementations to illustrate I/O-bound concurrency
+            speed-ups at the IT-infrastructure level.
+          </p>
+          <div class="tags">
+            <span class="tag">Web Scraping</span>
+            <span class="tag">Concurrency</span>
+          </div>
+          <div class="team"><strong>Team:</strong> Sultan Fahed</div>
+        </article>
+
+      </div>
+
+      <h3 style="margin-top: 56px;">ISC353 — Information Systems Security · Spring 2026</h3>
+      <p class="muted" style="margin-top: -4px;">
+        Hands-on security engineering with realistic threat models,
+        attacker simulations, and defensive implementations.
+      </p>
+      <div class="card-grid">
+
+        <article class="card reveal">
+          <div class="kicker">ISC353 · Offensive Security</div>
+          <h3>Web Application Penetration Testing Lab</h3>
+          <p>
+            Practical pen-testing of DVWA and OWASP Juice Shop through
+            a Burp Suite proxy, identifying and exploiting common
+            web-application vulnerabilities and documenting mitigations.
+          </p>
+          <div class="tags">
+            <span class="tag">Burp Suite</span>
+            <span class="tag">DVWA</span>
+            <span class="tag">OWASP Juice Shop</span>
+          </div>
+          <div class="team"><strong>Team:</strong> Aisha Almutairi</div>
+        </article>
+
+        <article class="card reveal">
+          <div class="kicker">ISC353 · Awareness &amp; Training</div>
+          <h3>Phishing Awareness Simulation</h3>
+          <p>
+            End-to-end phishing campaign built with GoPhish on Kali
+            Linux to test user awareness in a controlled educational
+            setting, with analysis of click-through behavior and
+            recommended training improvements.
+          </p>
+          <div class="tags">
+            <span class="tag">GoPhish</span>
+            <span class="tag">Kali Linux</span>
+            <span class="tag">Awareness</span>
+          </div>
+          <div class="team"><strong>Team:</strong> Hajer Alajmi · Hajar Alsahaib</div>
+        </article>
+
+        <article class="card reveal">
+          <div class="kicker">ISC353 · Malware Analysis</div>
+          <h3>AES-256 Ransomware Simulator</h3>
+          <p>
+            A reversible ransomware behavior simulator for controlled
+            malware analysis. Cannot spread, persist, or operate outside
+            its designated sandbox directory — built under instructor
+            supervision in an isolated VM.
+          </p>
+          <div class="tags">
+            <span class="tag">AES-256</span>
+            <span class="tag">Sandboxing</span>
+            <span class="tag">Educational</span>
+          </div>
+          <div class="team"><strong>Team:</strong> Mohammed (mohe4488)</div>
+          <a class="card-link" href="https://github.com/mohe4488/ISC353-Spring-AES256-Ransomware-Simulator" target="_blank" rel="noopener">View repository</a>
+        </article>
+
+        <article class="card reveal">
+          <div class="kicker">ISC353 · Defensive Engineering</div>
+          <h3>Secure Authentication with MFA</h3>
+          <p>
+            Flask web application implementing Argon2id password
+            hashing, TOTP-based multi-factor authentication, JWT
+            sessions, rate limiting, and progressive account lockout —
+            paired with brute-force and credential-stuffing scripts
+            to empirically validate every defense.
+          </p>
+          <div class="tags">
+            <span class="tag">Flask</span>
+            <span class="tag">Argon2id</span>
+            <span class="tag">TOTP</span>
+            <span class="tag">JWT</span>
+          </div>
+          <div class="team"><strong>Team:</strong> Mahnoor Akhtar · Rana Omar</div>
+        </article>
+
+      </div>
     </div>
   </section>
 
