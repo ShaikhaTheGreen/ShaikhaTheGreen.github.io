@@ -551,6 +551,93 @@ section:first-of-type { border-top: none; }
   margin: 0;
 }
 
+/* ---------- Courses ---------- */
+.courses {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 10px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.courses li {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 14px 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition: border-color .2s var(--ease), transform .2s var(--ease);
+}
+.courses li:hover { border-color: var(--gold); transform: translateY(-1px); }
+.courses .code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: .78rem;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: .03em;
+  flex: none;
+}
+.courses .title {
+  font-size: .94rem;
+  color: var(--ink);
+  line-height: 1.35;
+}
+
+/* ---------- Advisees ---------- */
+.advisee {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 26px 30px 26px 32px;
+  margin-top: 28px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color .25s var(--ease), box-shadow .25s var(--ease);
+}
+.advisee:hover {
+  border-color: transparent;
+  box-shadow: 0 24px 48px -24px rgba(10,34,64,.22);
+}
+.advisee::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--navy), var(--gold));
+}
+.advisee .role-tag {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.advisee h3 {
+  margin: 0 0 8px;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+}
+.advisee .topic {
+  color: var(--ink);
+  margin: 0 0 6px;
+  font-size: .98rem;
+}
+.advisee .topic .label {
+  font-weight: 600;
+  color: var(--navy);
+}
+.advisee .co {
+  font-size: .9rem;
+  color: var(--ink-mute);
+  margin: 0;
+}
+
 /* ---------- Service callout ---------- */
 .service {
   margin-top: 28px;
