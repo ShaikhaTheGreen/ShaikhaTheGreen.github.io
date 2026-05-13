@@ -364,6 +364,204 @@ section:first-of-type { border-top: none; }
 }
 .contact-list a:hover { color: var(--navy); border: none; }
 
+/* ---------- Education list ---------- */
+.edu-list {
+  display: grid;
+  gap: 18px;
+  margin-top: 28px;
+}
+.edu-item {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px 26px;
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  gap: 22px;
+  align-items: baseline;
+  transition: border-color .2s var(--ease), transform .2s var(--ease);
+}
+.edu-item:hover { border-color: var(--gold); transform: translateY(-2px); }
+.edu-year {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: var(--navy);
+  letter-spacing: -0.02em;
+}
+.edu-body h3 { margin-bottom: 2px; }
+.edu-body .inst {
+  font-size: .95rem;
+  color: var(--ink-mute);
+  margin-bottom: 8px;
+}
+.edu-body .thesis {
+  font-size: .9rem;
+  color: var(--ink);
+  border-left: 2px solid var(--gold);
+  padding-left: 12px;
+  margin: 0;
+  font-style: italic;
+}
+@media (max-width: 520px) {
+  .edu-item { grid-template-columns: 1fr; gap: 6px; }
+  .edu-year { font-size: 1.2rem; }
+}
+
+/* ---------- Publications ---------- */
+.pubs {
+  list-style: none;
+  padding: 0;
+  margin: 28px 0 0;
+  counter-reset: pub;
+}
+.pubs li {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 18px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+.pubs li:last-child { border-bottom: none; }
+.pubs .pub-year {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: var(--gold);
+  padding-top: 2px;
+}
+.pubs .pub-title {
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 4px;
+  line-height: 1.35;
+}
+.pubs .pub-authors {
+  font-size: .9rem;
+  color: var(--ink-mute);
+  margin: 0 0 4px;
+}
+.pubs .pub-venue {
+  font-size: .9rem;
+  color: var(--ink);
+  font-style: italic;
+  margin: 0;
+}
+@media (max-width: 520px) {
+  .pubs li { grid-template-columns: 1fr; gap: 4px; }
+}
+
+/* ---------- Timeline (experience) ---------- */
+.tl {
+  position: relative;
+  margin: 28px 0 0;
+  padding-left: 22px;
+}
+.tl::before {
+  content: "";
+  position: absolute;
+  left: 5px; top: 8px; bottom: 8px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--navy), var(--gold));
+  border-radius: 2px;
+}
+.tl-item {
+  position: relative;
+  padding: 4px 0 22px 16px;
+}
+.tl-item::before {
+  content: "";
+  position: absolute;
+  left: -22px; top: 8px;
+  width: 12px; height: 12px;
+  background: var(--surface);
+  border: 2px solid var(--navy);
+  border-radius: 50%;
+}
+.tl-item:hover::before { border-color: var(--gold); }
+.tl-when {
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin-bottom: 4px;
+}
+.tl-role {
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 3px;
+}
+.tl-org {
+  font-size: .92rem;
+  color: var(--ink-mute);
+  margin: 0;
+}
+
+/* ---------- Subject pills ---------- */
+.subjects {
+  display: flex; flex-wrap: wrap;
+  gap: 8px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.subjects li {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font-size: .88rem;
+  color: var(--ink);
+  font-weight: 500;
+  transition: border-color .2s var(--ease), color .2s var(--ease), background .2s var(--ease);
+}
+.subjects li:hover {
+  border-color: var(--navy);
+  color: var(--navy);
+  background: rgba(10, 34, 64, .03);
+}
+
+/* ---------- Certifications grid ---------- */
+.creds {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 14px;
+  margin-top: 28px;
+  padding: 0;
+  list-style: none;
+}
+.creds li {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  transition: border-color .2s var(--ease), transform .2s var(--ease);
+}
+.creds li:hover { border-color: var(--gold); transform: translateY(-2px); }
+.creds .cred-name {
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 4px;
+  line-height: 1.3;
+}
+.creds .cred-meta {
+  font-size: .82rem;
+  color: var(--ink-mute);
+  margin: 0;
+}
+
+/* ---------- Service callout ---------- */
+.service {
+  margin-top: 28px;
+  padding: 24px 28px;
+  background: linear-gradient(135deg, rgba(10,34,64,.04), rgba(201,162,39,.06));
+  border-left: 3px solid var(--gold);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.service p { margin: 0; color: var(--ink); }
+.service strong { color: var(--navy); }
+
 /* ---------- Footer ---------- */
 footer {
   padding: 36px var(--gutter);
