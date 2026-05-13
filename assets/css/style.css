@@ -229,24 +229,27 @@ section:first-of-type { border-top: none; }
   letter-spacing: -0.04em;
 }
 
-/* ---------- Affiliations strip ---------- */
+/* ---------- Affiliations strip ----------
+   Designed as two stacked blocks per column: logo on top in a fixed-
+   height "mark zone" so both logos share a baseline; role text below.
+   Two-column grid on desktop, single column on narrow screens.        */
 .affiliations {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  margin-top: 36px;
-  padding-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 32px;
+  row-gap: 26px;
+  margin-top: 40px;
+  padding-top: 32px;
   border-top: 1px solid var(--line);
 }
 .affiliation {
   display: flex;
-  align-items: center;
-  gap: 24px;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
 }
-.affiliation .logo-cell {
-  flex: none;
-  width: 200px;
-  height: 56px;
+.affiliation .affil-mark {
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -259,30 +262,26 @@ section:first-of-type { border-top: none; }
   object-fit: contain;
   object-position: left center;
 }
-.affiliation .role {
+.affiliation .affil-text {
   display: flex;
   flex-direction: column;
+  gap: 3px;
   line-height: 1.4;
-  font-size: .94rem;
 }
-.affiliation .role strong {
+.affiliation .affil-text .role {
   color: var(--ink);
   font-weight: 600;
+  font-size: .94rem;
   letter-spacing: -0.005em;
 }
-.affiliation .role .muted {
+.affiliation .affil-text .meta {
   color: var(--ink-mute);
-  font-size: .86rem;
+  font-size: .84rem;
 }
-@media (max-width: 720px) {
-  .affiliation { gap: 18px; }
-  .affiliation .logo-cell { width: 160px; height: 44px; }
-  .affiliation .affil-logo { max-height: 44px; }
-}
-@media (max-width: 460px) {
-  .affiliation { flex-direction: column; align-items: flex-start; gap: 8px; }
-  .affiliation .logo-cell { width: auto; height: 40px; }
-  .affiliation .affil-logo { max-height: 40px; }
+@media (max-width: 540px) {
+  .affiliations { grid-template-columns: 1fr; row-gap: 22px; column-gap: 0; }
+  .affiliation .affil-mark { height: 50px; }
+  .affiliation .affil-logo { max-height: 46px; }
 }
 
 /* ---------- Cards ---------- */
