@@ -479,6 +479,20 @@ section:first-of-type { border-top: none; }
   margin: 0 0 4px;
   line-height: 1.35;
 }
+.pubs .pub-title a {
+  color: var(--ink);
+  border: none;
+  background-image: linear-gradient(var(--gold), var(--gold));
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size .25s var(--ease), color .2s var(--ease);
+}
+.pubs .pub-title a:hover {
+  color: var(--navy);
+  background-size: 100% 1px;
+  border: none;
+}
 .pubs .pub-authors {
   font-size: .9rem;
   color: var(--ink-mute);
