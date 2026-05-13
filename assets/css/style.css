@@ -232,31 +232,57 @@ section:first-of-type { border-top: none; }
 /* ---------- Affiliations strip ---------- */
 .affiliations {
   display: flex;
-  flex-wrap: wrap;
-  gap: 18px 36px;
-  align-items: center;
+  flex-direction: column;
+  gap: 18px;
   margin-top: 36px;
   padding-top: 28px;
   border-top: 1px solid var(--line);
 }
 .affiliation {
-  display: flex; align-items: center; gap: 16px;
-  font-size: .92rem; color: var(--ink-mute);
-  padding: 6px 0;
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
-.affiliation strong { color: var(--ink); font-weight: 600; }
-.affiliation .affil-logo {
-  height: 46px;
-  width: auto;
-  max-width: 200px;
-  object-fit: contain;
+.affiliation .logo-cell {
   flex: none;
-  padding: 4px 16px 4px 0;
-  border-right: 1px solid var(--line);
+  width: 200px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
-@media (max-width: 560px) {
-  .affiliation { gap: 12px; }
-  .affiliation .affil-logo { height: 36px; max-width: 150px; padding-right: 12px; }
+.affiliation .affil-logo {
+  max-height: 56px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  object-position: left center;
+}
+.affiliation .role {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+  font-size: .94rem;
+}
+.affiliation .role strong {
+  color: var(--ink);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+.affiliation .role .muted {
+  color: var(--ink-mute);
+  font-size: .86rem;
+}
+@media (max-width: 720px) {
+  .affiliation { gap: 18px; }
+  .affiliation .logo-cell { width: 160px; height: 44px; }
+  .affiliation .affil-logo { max-height: 44px; }
+}
+@media (max-width: 460px) {
+  .affiliation { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .affiliation .logo-cell { width: auto; height: 40px; }
+  .affiliation .affil-logo { max-height: 40px; }
 }
 
 /* ---------- Cards ---------- */
