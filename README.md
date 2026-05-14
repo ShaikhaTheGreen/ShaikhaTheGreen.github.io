@@ -72,10 +72,6 @@ This site is built with a static-first philosophy, which already eliminates most
 - **Email obfuscation** (`_at_` instead of `@`) in the Contact card.
 - Issues + Wiki **disabled** — no extra surfaces, no spam intake.
 
-## Forking this site
-
-The structure is generic enough that any academic can adapt it. The companion file [`../prompt-for-anfal.md`](../prompt-for-anfal.md) (kept locally, not committed here) is a ready-to-paste prompt for a coding LLM that adapts this site to a different person with a calligraphy-inspired theme — use it as a template.
-
 ## License
 
 The site **code** (HTML, CSS, JS, structure) is MIT-licensed — see [LICENSE](LICENSE). Reuse it freely.
